@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0) scale(2.5);
+  }
+  25% {
+    transform: rotate(-10deg) scale(2.5);
+  }
+  75% {
+    transform: rotate(10deg) scale(2.5);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce-delay-1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes bounce-delay-2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes bounce-delay-3 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* 替换之前的箭头动画，改用更柔和的浮动动画 */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+}
+
+.animate-float-1 {
+  animation: float 1.5s infinite ease-in-out;
+}
+
+.animate-float-2 {
+  animation: float 1.5s infinite ease-in-out 0.2s;
+}
+
+.animate-float-3 {
+  animation: float 1.5s infinite ease-in-out 0.4s;
+}
+
+/* 更温和的悬浮效果 */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
+
+.animate-bounce-delay-1 {
+  animation: bounce-delay-1 1s infinite;
+}
+
+.animate-bounce-delay-2 {
+  animation: bounce-delay-2 1s infinite 0.2s;
+}
+
+.animate-bounce-delay-3 {
+  animation: bounce-delay-3 1s infinite 0.4s;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s infinite ease-in-out;
+}
+
+.coze-chat-icon {
+  transition: transform 0.3s ease !important;
+}
+
+.coze-chat-icon:hover {
+  transform: scale(1.1) !important;
+}
+
+.coze-chat-icon svg {
+  transition: all 0.3s ease !important;
+}
+
+.coze-chat-icon:hover svg {
+  filter: brightness(1.2) !important;
+}
+
+/* Hide unwanted buttons */
+.coze-messages-button,
+.coze-settings-button {
+  display: none !important;
+}
